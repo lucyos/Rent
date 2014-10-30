@@ -21,7 +21,7 @@ public class CreateCSVRentClientServerTest {
 					true);
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					clientSocket.getInputStream()));
-			//Send the text message with the new Order 
+			//Send the text message with the new Rent 
 			//Remember the text format has to implement the app-specific protocol
 			out.println(CreateCSVRentTest.buildNewRentCSVText());
 			out.print((char)13);//signal the end of the message

@@ -19,17 +19,17 @@
         <interceptor-binding>
         <!-- the interceptor will be applied for all ejbs and methods -->
             <ejb-name>*</ejb-name>
-            <interceptor-rent>
+            <interceptor-order>
                 <interceptor-class>com.babel.interceptor.TimeLogger</interceptor-class>
-            </interceptor-rent>
+            </interceptor-order>
         </interceptor-binding>
         <interceptor-binding>
         <!-- the interceptor will be applied only for one bean -->
             <ejb-name>SaveRentEJB</ejb-name>
-            <interceptor-rent>
+            <interceptor-order>
                 <interceptor-class>com.babel.interceptor.UserInfoLogger</interceptor-class>
                 
-            </interceptor-rent>
+            </interceptor-order>
         </interceptor-binding>
         
         <interceptor-binding>

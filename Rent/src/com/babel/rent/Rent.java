@@ -43,7 +43,7 @@ public class Rent extends PersistentEntity {
 	}
 	
 	
-	public Double calculateOrderValue(){
+	public Double calculateRentValue(){
 		double s=0;
 		for (RentLine l:this.rentLines)
 			s=s+l.getPrice()*l.getQuantity();
@@ -126,9 +126,6 @@ public class Rent extends PersistentEntity {
 		 p.setRent(this);
 	}
 
-	public Set<RentLine> getRentLines(){
-		return this.rentLines;
-	}
 
 
 
@@ -142,6 +139,9 @@ public class Rent extends PersistentEntity {
 		this.processId = processId;
 	}
 
+	public Set<RentLine> getRentLines() {
+		return rentLines;
+	}
 
 
 	public void setRentLines(Set<RentLine> rentLines) {

@@ -1,5 +1,5 @@
 
-package com.babel.order.test.ws.port;
+package com.babel.rent.test.ws.port;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -15,35 +15,35 @@ import javax.xml.bind.annotation.XmlSeeAlso;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "OrderWS", targetNamespace = "http://ws.order.babel.com/")
+@WebService(name = "RentWS", targetNamespace = "http://ws.rent.babel.com/")
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 @XmlSeeAlso({
     ObjectFactory.class
 })
-public interface OrderWS {
+public interface RentWS {
 
 
     /**
      * 
      * @param arg0
      * @return
-     *     returns com.babel.order.test.ws.port.Order
+     *     returns com.babel.rent.test.ws.port.Rent
      */
     @WebMethod
     @WebResult(partName = "return")
-    public Order createOrder(
+    public Rent createRent(
         @WebParam(name = "arg0", partName = "arg0")
-        Order arg0);
+        Rent arg0);
 
     /**
      * 
      * @param arg0
      * @return
-     *     returns com.babel.order.test.ws.port.Order
+     *     returns com.babel.rent.test.ws.port.Rent
      */
     @WebMethod
     @WebResult(partName = "return")
-    public Order readOrder(
+    public Rent readRent(
         @WebParam(name = "arg0", partName = "arg0")
         long arg0);
 
@@ -51,12 +51,12 @@ public interface OrderWS {
      * 
      * @param arg0
      * @return
-     *     returns com.babel.order.test.ws.port.Order
+     *     returns com.babel.rent.test.ws.port.Rent
      */
     @WebMethod
     @WebResult(partName = "return")
-    public Order saveOrder(
+    public Rent saveRent(
         @WebParam(name = "arg0", partName = "arg0")
-        Order arg0);
+        Rent arg0);
 
 }

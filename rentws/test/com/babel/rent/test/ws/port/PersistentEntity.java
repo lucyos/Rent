@@ -1,5 +1,5 @@
 
-package com.babel.order.test.ws.port;
+package com.babel.rent.test.ws.port;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -45,8 +45,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "version"
 })
 @XmlSeeAlso({
-    Order.class,
-    OrderLine.class
+    Rent.class,
+    RentLine.class
 })
 public abstract class PersistentEntity {
 

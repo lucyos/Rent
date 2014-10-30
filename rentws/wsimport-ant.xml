@@ -2,10 +2,10 @@
 
   <target name="wsimport">
     	
-    <exec executable="C:/Program Files/Java/jdk1.7.0_67//bin/wsimport">
+    <exec executable="C:/Program Files/Java/jdk1.7.0_67/bin/wsimport">
     		
-      <arg line="-keep -s ./test -p com.babel.order.test.ws.port 
-          -d ./target http://localhost:8080/order-ws/Order?wsdl"/>
+      <arg line="-keep -s ./test -p com.babel.rent.test.ws.port 
+          -d ./target http://localhost:8080/rent-ws/Rent?wsdl"/>
     		
     </exec>
     	

@@ -13,7 +13,7 @@ public class RentLine extends PersistentEntity {
 
 	private String carModel;
 	 @ManyToOne 
-	 @JsonBackReference//("RentLines")
+	 @JsonBackReference//("rentLines")
 	private Rent rent;
 	private double price;
 	private double quantity;

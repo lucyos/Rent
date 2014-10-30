@@ -29,7 +29,7 @@
 	</persistence-unit> 
 
  <!-- Oracle config
-<persistence-unit name="BabelConnOrderSocket"
+<persistence-unit name="BabelConnRentSocket"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		

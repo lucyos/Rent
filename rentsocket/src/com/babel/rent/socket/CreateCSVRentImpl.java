@@ -20,7 +20,7 @@ public class CreateCSVRentImpl implements CreateCSVRent {
 	/**
 	 * 
 	 * @param p
-	 *            - expecting CSV String implementing the CreateOrder from CSV
+	 *            - expecting CSV String implementing the CreateRent from CSV
 	 *            protocol
 	 */
 	public String createCSVRent(String p) {
@@ -55,7 +55,7 @@ public class CreateCSVRentImpl implements CreateCSVRent {
 		try {
 			Rent nRent = this.getCreateRentDelegate().createRent(rent);
 			// If everything ok return some unique reference for future
-			// identification of the new order.
+			// identification of the new rent.
 			// Just for this simple test, we return the id, though not really
 			// recommended in real life situations.
 			return nRent.getId().toString();

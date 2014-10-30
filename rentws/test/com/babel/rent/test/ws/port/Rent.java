@@ -1,5 +1,5 @@
 
-package com.babel.order.test.ws.port;
+package com.babel.rent.test.ws.port;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,28 +11,28 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for order complex type.
+ * <p>Java class for rent complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="order">
+ * &lt;complexType name="rent">
  *   &lt;complexContent>
- *     &lt;extension base="{http://ws.order.babel.com/}persistentEntity">
+ *     &lt;extension base="{http://ws.rent.babel.com/}persistentEntity">
  *       &lt;sequence>
- *         &lt;element name="customerEmail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="customerName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="deliveryAddress" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="clientEmail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="clientName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="clientAddress" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="bankAccount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="orderDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="specialRequirements" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="rentDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="notes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="processId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="orderLines" minOccurs="0">
+ *         &lt;element name="rentLines" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="orderLines" type="{http://ws.order.babel.com/}orderLine" maxOccurs="unbounded" minOccurs="0"/>
+ *                   &lt;element name="rentLines" type="{http://ws.rent.babel.com/}rentLine" maxOccurs="unbounded" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
@@ -47,40 +47,40 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "order", propOrder = {
-    "customerEmail",
-    "customerName",
-    "deliveryAddress",
+@XmlType(name = "rent", propOrder = {
+    "clientEmail",
+    "clientName",
+    "clientAddress",
     "bankAccount",
-    "orderDate",
-    "specialRequirements",
+    "rentDate",
+    "notes",
     "processId",
-    "orderLines"
+    "rentLines"
 })
-public class Order
+public class Rent
     extends PersistentEntity
 {
 
-    protected String customerEmail;
-    protected String customerName;
-    protected String deliveryAddress;
+    protected String clientEmail;
+    protected String clientName;
+    protected String clientAddress;
     protected String bankAccount;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar orderDate;
-    protected String specialRequirements;
+    protected XMLGregorianCalendar rentDate;
+    protected String notes;
     protected String processId;
-    protected Order.OrderLines orderLines;
+    protected Rent.RentLines rentLines;
 
     /**
-     * Gets the value of the customerEmail property.
+     * Gets the value of the clientEmail property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getCustomerEmail() {
-        return customerEmail;
+    public String getClientEmail() {
+        return clientEmail;
     }
 
     /**
@@ -91,56 +91,56 @@ public class Order
      *     {@link String }
      *     
      */
-    public void setCustomerEmail(String value) {
-        this.customerEmail = value;
+    public void setClientEmail(String value) {
+        this.clientEmail = value;
     }
 
     /**
-     * Gets the value of the customerName property.
+     * Gets the value of the clientName property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getCustomerName() {
-        return customerName;
+    public String getClientName() {
+        return clientName;
     }
 
     /**
-     * Sets the value of the customerName property.
+     * Sets the value of the clientName property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setCustomerName(String value) {
-        this.customerName = value;
+    public void setClientName(String value) {
+        this.clientName = value;
     }
 
     /**
-     * Gets the value of the deliveryAddress property.
+     * Gets the value of the clientAddress property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeliveryAddress() {
-        return deliveryAddress;
+    public String getClientAddress() {
+        return clientAddress;
     }
 
     /**
-     * Sets the value of the deliveryAddress property.
+     * Sets the value of the clientAddress property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeliveryAddress(String value) {
-        this.deliveryAddress = value;
+    public void setClientAddress(String value) {
+        this.clientAddress = value;
     }
 
     /**
@@ -168,51 +168,51 @@ public class Order
     }
 
     /**
-     * Gets the value of the orderDate property.
+     * Gets the value of the rentDate property.
      * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getOrderDate() {
-        return orderDate;
+    public XMLGregorianCalendar getRentDate() {
+        return rentDate;
     }
 
     /**
-     * Sets the value of the orderDate property.
+     * Sets the value of the rentDate property.
      * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setOrderDate(XMLGregorianCalendar value) {
-        this.orderDate = value;
+    public void setRentDate(XMLGregorianCalendar value) {
+        this.rentDate = value;
     }
 
     /**
-     * Gets the value of the specialRequirements property.
+     * Gets the value of the notes property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getSpecialRequirements() {
-        return specialRequirements;
+    public String getNotes() {
+        return notes;
     }
 
     /**
-     * Sets the value of the specialRequirements property.
+     * Sets the value of the notes property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setSpecialRequirements(String value) {
-        this.specialRequirements = value;
+    public void setNotes(String value) {
+        this.notes = value;
     }
 
     /**
@@ -240,27 +240,27 @@ public class Order
     }
 
     /**
-     * Gets the value of the orderLines property.
+     * Gets the value of the rentLines property.
      * 
      * @return
      *     possible object is
-     *     {@link Order.OrderLines }
+     *     {@link Rent.RentLines }
      *     
      */
-    public Order.OrderLines getOrderLines() {
-        return orderLines;
+    public Rent.RentLines getRentLines() {
+        return rentLines;
     }
 
     /**
-     * Sets the value of the orderLines property.
+     * Sets the value of the rentLines property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Order.OrderLines }
+     *     {@link Rent.RentLines }
      *     
      */
-    public void setOrderLines(Order.OrderLines value) {
-        this.orderLines = value;
+    public void setRentLines(Rent.RentLines value) {
+        this.rentLines = value;
     }
 
 
@@ -274,7 +274,7 @@ public class Order
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="orderLines" type="{http://ws.order.babel.com/}orderLine" maxOccurs="unbounded" minOccurs="0"/>
+     *         &lt;element name="rentLines" type="{http://ws.rent.babel.com/}rentLine" maxOccurs="unbounded" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -285,39 +285,39 @@ public class Order
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "orderLines"
+        "rentLines"
     })
-    public static class OrderLines {
+    public static class RentLines {
 
-        protected List<OrderLine> orderLines;
+        protected List<RentLine> rentLines;
 
         /**
-         * Gets the value of the orderLines property.
+         * Gets the value of the rentLines property.
          * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the orderLines property.
+         * This is why there is not a <CODE>set</CODE> method for the rentLines property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
-         *    getOrderLines().add(newItem);
+         *    getRentLines().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link OrderLine }
+         * {@link RentLine }
          * 
          * 
          */
-        public List<OrderLine> getOrderLines() {
-            if (orderLines == null) {
-                orderLines = new ArrayList<OrderLine>();
+        public List<RentLine> getRentLines() {
+            if (rentLines == null) {
+                rentLines = new ArrayList<RentLine>();
             }
-            return this.orderLines;
+            return this.rentLines;
         }
 
     }

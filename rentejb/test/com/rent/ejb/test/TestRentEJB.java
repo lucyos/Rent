@@ -49,14 +49,14 @@ public class TestRentEJB {
 	public void testReadUpdate() {
 		Rent rent = this.readRentService.readRent(RENT_ID);
 		assertNotNull("Rent not found", rent);
-		rent.setSpecialRequirements(TESTING_UPDATE);
+		rent.setNotes(TESTING_UPDATE);
 		Rent updatedRent = this.saveRentService.saveRent(rent);
 		assertNotNull("Updated Rent not coming back", updatedRent);
 		assertTrue("Entity version should have changed +1 but it did not",
 				rent.getVersion().equals(updatedRent.getVersion() - 1));
 		Rent dbRent = this.readRentService.readRent(RENT_ID);
 		assertTrue("the new field value not commited in DB",
-				TESTING_UPDATE.equals(dbRent.getSpecialRequirements()));
+				TESTING_UPDATE.equals(dbRent.getNotes()));
 
 		assertTrue(
 				"Entity version in the DB " + dbRent.getVersion()

@@ -48,10 +48,10 @@ public class CreateRentHandler extends EmailMessageHandler {
 			// TODO: implement here a filter for trusted email addresses only
 
 			// expecting a message body structured according to the
-			// CreateCSVOrder protocol
+			// CreateCSVRent protocol
 			Multipart mp = (Multipart) emailMessage.getContent();
 			BodyPart bp = mp.getBodyPart(0);
-			String response = this.sendCreateCSVOrderMessage(bp.getContent()
+			String response = this.sendCreateCSVRentMessage(bp.getContent()
 					.toString());
 			// String response="ok";
 			this.replyServerResponse(emailMessage, response, user, pass);
@@ -65,7 +65,7 @@ public class CreateRentHandler extends EmailMessageHandler {
 
 	/**
 	 * reply to that message to inform the sender about the result of the new
-	 * order process
+	 * rent process
 	 * 
 	 * @throws MessagingException
 	 */
@@ -115,7 +115,7 @@ public class CreateRentHandler extends EmailMessageHandler {
 
 	}
 
-	private String sendCreateCSVOrderMessage(String newOrderMsg)
+	private String sendCreateCSVRentMessage(String newRentMsg)
 			throws UnknownHostException, IOException {
 		Socket clientSocket = null;
 		try {
@@ -127,13 +127,13 @@ public class CreateRentHandler extends EmailMessageHandler {
 					true);
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					clientSocket.getInputStream()));
-			// Send the text message with the new Order
-			out.println(newOrderMsg);
+			// Send the text message with the new Rent
+			out.println(newRentMsg);
 			out.print((char) 13);// signal the end of the message
 
 			String response = in.readLine();
 			System.out
-					.println("server response (the new order's external ID): "
+					.println("server response (the new rent's external ID): "
 							+ response);
 			clientSocket.close();
 			return response;
@@ -143,4 +143,4 @@ public class CreateRentHandler extends EmailMessageHandler {
 		}
 
 	}
-}// end CreateOrderHandler
+}// end CreateRentHandler

@@ -1,5 +1,5 @@
 
-package com.babel.order.test.ws.port;
+package com.babel.rent.test.ws.port;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,17 +7,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for orderLine complex type.
+ * <p>Java class for rentLine complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="orderLine">
+ * &lt;complexType name="rentLine">
  *   &lt;complexContent>
- *     &lt;extension base="{http://ws.order.babel.com/}persistentEntity">
+ *     &lt;extension base="{http://ws.rent.babel.com/}persistentEntity">
  *       &lt;sequence>
- *         &lt;element name="item" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="order" type="{http://ws.order.babel.com/}order" minOccurs="0"/>
+ *         &lt;element name="carModel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="rent" type="{http://ws.rent.babel.com/}rent" minOccurs="0"/>
  *         &lt;element name="price" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         &lt;element name="quantity" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *       &lt;/sequence>
@@ -29,18 +29,18 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "orderLine", propOrder = {
-    "item",
-    "order",
+@XmlType(name = "rentLine", propOrder = {
+    "carModel",
+    "rent",
     "price",
     "quantity"
 })
-public class OrderLine
+public class RentLine
     extends PersistentEntity
 {
 
-    protected String item;
-    protected Order order;
+    protected String carModel;
+    protected Rent rent;
     protected double price;
     protected double quantity;
 
@@ -52,8 +52,8 @@ public class OrderLine
      *     {@link String }
      *     
      */
-    public String getItem() {
-        return item;
+    public String getCarModel() {
+        return carModel;
     }
 
     /**
@@ -64,32 +64,32 @@ public class OrderLine
      *     {@link String }
      *     
      */
-    public void setItem(String value) {
-        this.item = value;
+    public void setCarModel(String value) {
+        this.carModel = value;
     }
 
     /**
-     * Gets the value of the order property.
+     * Gets the value of the rent property.
      * 
      * @return
      *     possible object is
-     *     {@link Order }
+     *     {@link Rent }
      *     
      */
-    public Order getOrder() {
-        return order;
+    public Rent getRent() {
+        return rent;
     }
 
     /**
-     * Sets the value of the order property.
+     * Sets the value of the rent property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Order }
+     *     {@link Rent }
      *     
      */
-    public void setOrder(Order value) {
-        this.order = value;
+    public void setRent(Rent value) {
+        this.rent = value;
     }
 
     /**
